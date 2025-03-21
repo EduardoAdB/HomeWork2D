@@ -1,19 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class coin : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    static public coin instance;
+    public Rigidbody2D rigbd;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {          
+            Debug.Log("pegou a moeda");
+            
+            coinAudio.instance.Claudio();
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
