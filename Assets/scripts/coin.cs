@@ -22,8 +22,7 @@ public class coin : MonoBehaviour
             
             coinAudio.instance.Claudio();
             coinparticles.instance.particula();
-            Destroy(gameObject);
-            coinparticles.instance.dinheiro = null;
+            Destroy(gameObject);           
         }
     }
 
