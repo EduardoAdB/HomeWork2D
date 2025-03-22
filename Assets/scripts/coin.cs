@@ -21,7 +21,9 @@ public class coin : MonoBehaviour
             Debug.Log("pegou a moeda");
             
             coinAudio.instance.Claudio();
+            coinparticles.instance.particula();
             Destroy(gameObject);
+            coinparticles.instance.dinheiro = null;
         }
     }
 

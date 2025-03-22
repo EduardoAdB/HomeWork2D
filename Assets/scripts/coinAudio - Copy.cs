@@ -9,7 +9,7 @@ public class coinAudio : MonoBehaviour
     public static coinAudio instance;
     public AudioSource Moeda;
     public int coincount;
-    public TextMeshProUGUI coinTxt;
+    public TextMeshProUGUI coinTxt;    
 
     private void Start()
     {
@@ -26,7 +26,7 @@ public class coinAudio : MonoBehaviour
 
     public void Claudio()
     {
-        Moeda.Play();
+        Moeda.Play();       
         coincount++;
     }
 }
